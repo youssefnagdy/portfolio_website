@@ -1,4 +1,5 @@
 @import "config";
+@import "utilities";
 *
 {
   margin: 0;
@@ -15,4 +16,65 @@ ul{list-style: none}
 h2,h3,h4
 {
   text-transform: uppercase}
+}
+
+/* Header */
+#header
+{
+
+  // HomeHeader
+  &-home
+  {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color:#fff;
+    .header-content
+    {
+      padding-top:15%;
+      text-align: center;
+      h1
+      {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+
+  // InnerHeader
+  &-inner
+  {
+
+  }
+}
+
+//navbar
+#main-nav
+{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  ul
+  {
+    display: flex;
+  }
+  li
+  {
+    padding: 1.5rem 1.5rem;
+  }
+  a
+  {
+    color: #fff;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+    &:hover
+    {
+      border-color:$medium-color;
+    }
+    &.current
+    {
+      border-color:$main-color;
+    }
+  }
 }
